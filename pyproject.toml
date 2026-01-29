@@ -5,23 +5,91 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aeri"
 version = "0.1.0"
-description = "Artificial Emotional & Reasoning Intelligence"
-authors = [{name = "AERI Team"}]
+description = "Artificial Emotional & Reasoning Intelligence - A developmental AI that learns from scratch"
 readme = "README.md"
-requires-python = ">=3.9"
+authors = [
+    {name = "AERI Development Team"}
+]
+license = {text = "MIT"}
+keywords = ["ai", "artificial-intelligence", "developmental-ai", "language-learning", "cognitive-science"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Cognitive Science",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "black", "flake8", "mypy"]
-notebooks = ["jupyter", "matplotlib", "seaborn"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+    "pre-commit>=3.0",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "matplotlib>=3.0",
+    "seaborn>=0.12",
+]
+ml = [
+    "torch>=2.0",
+    "scikit-learn>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/RumaruX/AERI"
+Documentation = "https://github.com/RumaruX/AERI#readme"
+Repository = "https://github.com/RumaruX/AERI"
+Issues = "https://github.com/RumaruX/AERI/issues"
 
 [tool.black]
 line-length = 88
 target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
 
 [tool.isort]
 profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true

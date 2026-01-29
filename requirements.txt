@@ -1,16 +1,21 @@
-# Core dependencies
+# Core Python
 python>=3.9
 
-# Development
+# Development & Testing
 pytest>=7.0
 pytest-cov>=4.0
 black>=23.0
 flake8>=6.0
 mypy>=1.0
+pre-commit>=3.0
 
-# Data handling
+# Data & Configuration
 numpy>=1.24
 pandas>=2.0
 pyyaml>=6.0
+scipy>=1.10
 
-# Add project-specific dependencies here as needed
+# Memory & Storage
+redis>=4.0
+sqlalchemy>=2.0
+python-rapidjson>=1.0

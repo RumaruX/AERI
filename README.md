@@ -204,7 +204,7 @@ When adding new functionality:
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/aeri.git
+git clone https://github.com/RumaruX/AERI.git
 cd aeri
 ```
 
@@ -437,7 +437,7 @@ AERI is an open research project, and we welcome contributions from developers, 
 #### Setting Up for Development
 ```bash
 # Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/aeri.git
+git clone https://github.com/RumaruX/AERI.git
 cd aeri
 
 # Set up development environment
@@ -591,7 +591,7 @@ For academic research using AERI:
   author = {AERI Development Team},
   year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/aeri},
+  url = {https://github.com/RumaruX/AERI},
   note = {A developmental AI system learning language from scratch}
 }
 ```
